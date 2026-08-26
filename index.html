@@ -185,21 +185,32 @@
   /* ===================================================================
      SLIDE 3 — unit economics
      =================================================================== */
-  .cols{display:grid; grid-template-columns:400px 1fr; gap:64px; flex:1 1 auto; min-height:0;}
+  .cols{display:grid; grid-template-columns:430px 1fr; gap:56px; flex:1 1 auto; min-height:0;}
   .chain-title, .panel-title{
     font-family:var(--f-text); font-weight:600;
     font-size:14px; letter-spacing:.12em; text-transform:uppercase;
     color:var(--muted-dim); margin-bottom:20px;
   }
   .chain{display:flex; flex-direction:column; gap:0;}
-  .chain-node{
+  /* Slide 3 links: liest sich wie eine Händlerkalkulation, Schritt für Schritt */
+  .calc-step{
     background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-sm);
-    padding:15px 22px; font-family:var(--f-text); font-weight:600; font-size:19px;
+    padding:11px 18px;
   }
-  .chain-node.end{background:var(--accent-soft); border-color:var(--accent-line); color:var(--accent);}
+  .calc-step.accent{background:var(--accent-soft); border-color:var(--accent-line);}
+  .calc-step .cs-head{
+    display:flex; align-items:baseline; gap:11px;
+    font-family:var(--f-text); font-weight:600; font-size:18px; color:var(--ink);
+  }
+  .calc-step .cs-no{flex:0 0 auto; font-size:12px; letter-spacing:.10em; color:var(--accent);}
+  .calc-step.accent .cs-head{color:var(--accent);}
+  .calc-step .cs-detail{
+    margin-top:3px; padding-left:34px;
+    font-family:var(--f-text); font-size:14px; color:var(--muted); line-height:1.38;
+  }
   .chain-arrow{
-    height:20px; display:flex; align-items:center; justify-content:center;
-    color:var(--muted-dim); font-size:16px; line-height:1;
+    height:16px; display:flex; align-items:center; justify-content:center;
+    color:var(--muted-dim); font-size:14px; line-height:1;
   }
 
   .scen-head{
@@ -548,9 +559,9 @@
         <div class="slide-inner center">
           <div class="kicker">Heinrichs · E-Commerce Performance</div>
           <h1>Vom neuen Onlineshop zum<br>steuerbaren Multichannel-Wachstum</h1>
-          <p class="lead">Google, Meta und Marktplätze nicht isoliert betrachten – sondern entlang einer gemeinsamen wirtschaftlichen Logik steuern.</p>
+          <p class="lead">Google, Meta und Marktplätze auf Basis derselben wirtschaftlichen Kennzahlen steuern.</p>
           <div class="tags">
-            <span class="tag">Unit Economics</span>
+            <span class="tag">Wirtschaftlichkeit</span>
             <span class="tag">Paid Media</span>
             <span class="tag">Daten &amp; Attribution</span>
             <span class="tag">Multichannel</span>
@@ -564,7 +575,7 @@
         <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker">Ausgangslage</div>
-            <h2>Die Infrastruktur steht.<br>Jetzt beginnt die eigentliche Validierung.</h2>
+            <h2>Wo Heinrichs im E-Commerce heute steht.</h2>
           </div>
 
           <div class="journey">
@@ -594,7 +605,7 @@
                 <div class="st-no">03 · Ziel 2026</div>
                 <h3>100.000 € Umsatz</h3>
                 <div class="st-fact">nächste Wachstumsstufe</div>
-                <div class="st-sub">Perspektive 2027: ≈ 500.000 € Umsatz</div>
+                <div class="st-sub">Perspektive: ≈ 500.000 € Jahresumsatz</div>
               </div>
               <div class="station">
                 <div class="st-no">04 · Zielbild</div>
@@ -604,40 +615,60 @@
             </div>
           </div>
 
-          <div class="statement lg">Der nächste Engpass ist nicht Technologie –<br>sondern herauszufinden, wie Neukunden wirtschaftlich gewonnen werden können.</div>
+          <div class="statement lg">Der Shop steht. Jetzt muss sich zeigen, welche Produkte und Kanäle wirtschaftlich neue Kunden bringen können.</div>
 
-          <div class="footnote">Zahlen laut bisherigen Gesprächen · aktuelle Frühphase, noch keine belastbare historische Baseline. Die Ziele 2026/2027 stammen aus den bisherigen Gesprächen und sind keine Prognose von DDM. Die Stationen beschreiben den Entwicklungsstand, keine Bewertung der bisherigen Bestellungen.</div>
+          <div class="footnote">Zahlen laut bisherigen Gesprächen. Der Shop läuft erst wenige Wochen, es gibt also noch keine belastbare Vergleichsbasis. Die genannten Umsatzziele stammen von Heinrichs selbst und sind keine Prognose von DDM. Die Stationen beschreiben den Stand der Entwicklung und bewerten die bisherigen Bestellungen nicht.</div>
         </div>
       </section>
 
-      <!-- ============ SLIDE 3 · UNIT ECONOMICS ============ -->
+      <!-- ============ SLIDE 3 · WIRTSCHAFTLICHKEIT ============ -->
       <section class="slide">
         <div class="slide-inner">
           <div class="slide-head">
-            <div class="kicker">Unit Economics</div>
-            <h2><span class="dim">Die Frage ist nicht: „Wie viel Ad Spend?“</span><br>Sondern: Was darf eine Bestellung kosten?</h2>
+            <div class="kicker">Wirtschaftlichkeit</div>
+            <h2>Wie viel Werbebudget sinnvoll ist,<br>ergibt sich aus der Wirtschaftlichkeit pro Bestellung.</h2>
           </div>
 
           <div class="cols" style="margin-top:38px;">
             <div>
-              <div class="chain-title">Die Rechenrichtung</div>
+              <div class="chain-title">So rechnen wir</div>
               <div class="chain">
-                <div class="chain-node">Rohmarge / Deckungsbeitrag</div>
+                <div class="calc-step">
+                  <div class="cs-head"><span class="cs-no">01</span>Umsatz pro Bestellung</div>
+                  <div class="cs-detail">aktuell Ø ca. 50–60 €</div>
+                </div>
                 <div class="chain-arrow">↓</div>
-                <div class="chain-node">max. CPO / CAC<br><span style="font-size:15px;color:var(--muted);font-weight:400;">zulässige Kosten pro Bestellung</span></div>
+                <div class="calc-step">
+                  <div class="cs-head"><span class="cs-no">02</span>Variable Kosten abziehen</div>
+                  <div class="cs-detail">Wareneinsatz · Versand &amp; Verpackung · Payment · erwartete Retouren</div>
+                </div>
                 <div class="chain-arrow">↓</div>
-                <div class="chain-node">Ziel-KUR / ROAS</div>
+                <div class="calc-step">
+                  <div class="cs-head"><span class="cs-no">03</span>Deckungsbeitrag vor Werbung</div>
+                  <div class="cs-detail">Was bleibt übrig, bevor Werbung bezahlt ist?</div>
+                </div>
                 <div class="chain-arrow">↓</div>
-                <div class="chain-node">Media Budget</div>
+                <div class="calc-step">
+                  <div class="cs-head"><span class="cs-no">04</span>Gewünschten Ertrag abziehen</div>
+                  <div class="cs-detail">Was soll nach der Werbung noch übrig bleiben?</div>
+                </div>
                 <div class="chain-arrow">↓</div>
-                <div class="chain-node end">skalierbarer Umsatz</div>
+                <div class="calc-step accent">
+                  <div class="cs-head"><span class="cs-no">05</span>Maximaler CPO / CAC</div>
+                  <div class="cs-detail">So viel darf eine neue Bestellung höchstens kosten.</div>
+                </div>
+                <div class="chain-arrow">↓</div>
+                <div class="calc-step">
+                  <div class="cs-head"><span class="cs-no">06</span>Daraus folgen</div>
+                  <div class="cs-detail">KUR / ROAS · Media-Budget · skalierbarer Umsatz</div>
+                </div>
               </div>
             </div>
 
             <div>
               <div class="scen-head">
                 <div class="basis">Beispiel: 10.000 € über Paid Media attribuierter Umsatz</div>
-                <div class="formula">Media Spend = Paid Revenue / ROAS</div>
+                <div class="formula">Media Spend = Umsatz / ROAS</div>
               </div>
               <div class="scen-grid">
                 <div class="scen">
@@ -661,16 +692,16 @@
                 </div>
               </div>
 
-              <div class="statement" style="margin-top:30px; font-size:29px;">Welches Szenario wirtschaftlich tragfähig ist, bestimmen nicht Google oder Meta – sondern die Unit Economics von Heinrichs.</div>
+              <div class="statement" style="margin-top:30px; font-size:28px;">Welcher dieser Werte für Heinrichs wirtschaftlich sinnvoll ist, können wir erst bestimmen, wenn Marge und variable Kosten bekannt sind.</div>
 
               <div class="params">
-                <span class="plabel">Noch offen</span>
-                <span>Rohmarge · Versand · Payment · Fulfillment · Retouren · Wiederkäufe · gewünschter DB</span>
+                <span class="plabel">Dafür brauchen wir</span>
+                <span>Rohmarge · Versand · Payment · Fulfillment · Retouren · Wiederkäufe · gewünschter Deckungsbeitrag</span>
               </div>
             </div>
           </div>
 
-          <div class="footnote">ROAS = Umsatz / Media Spend · KUR = Media Spend / Umsatz. Die drei Werte sind reine Rechenszenarien zur Illustration – keine Zielvorgabe und keine Aussage darüber, welcher ROAS für Heinrichs profitabel ist. Die wirtschaftlich tragfähige Schwelle lässt sich erst aus den echten Unit Economics berechnen.</div>
+          <div class="footnote">ROAS = Umsatz / Media Spend. KUR (Kosten-Umsatz-Relation) = Media Spend / Umsatz. Die drei Werte sind reine Rechenbeispiele. Sie sind keine Zielvorgabe und sagen nicht, welcher ROAS für Heinrichs profitabel ist. Das lässt sich erst berechnen, wenn Marge und variable Kosten vollständig vorliegen.</div>
         </div>
       </section>
 
@@ -680,7 +711,7 @@
           <div class="slide-head">
             <div class="kicker">Realer E-Commerce Case · Microsoft Ads</div>
             <h2>Mehr Umsatz.<br>Weniger Media Spend.</h2>
-            <p class="subline">Nicht mehr Budget war der erste Hebel – sondern bessere Messung und Steuerung.</p>
+            <p class="subline">Die größten Hebel lagen zunächst bei Messung, Budgetverteilung und Kampagnensteuerung.</p>
           </div>
 
           <div class="case-grid">
@@ -732,7 +763,7 @@
 
           <div class="result-band"><span class="hl">≈ +23 % Conversion-Wert</span> bei <span class="hl">≈ 40 % weniger Media Spend</span></div>
 
-          <div class="footnote">High-Ticket E-Commerce-Unternehmen · Microsoft Ads · dargestellte Werte gemäß bestehender DDM Case Study. Alle vier Balken teilen einen gemeinsamen Maßstab (100 % = 47.140 €), sind also untereinander und über beide Zeitpunkte hinweg direkt vergleichbar. Kein Rückschluss auf zu erwartende Ergebnisse für Heinrichs.</div>
+          <div class="footnote">High-Ticket E-Commerce-Unternehmen · Microsoft Ads. Die Werte stammen aus der bestehenden DDM Case Study. Alle vier Balken teilen denselben Maßstab (100 % = 47.140 €) und sind damit untereinander und über beide Zeitpunkte vergleichbar. Daraus lassen sich keine Ergebnisse für Heinrichs ableiten.</div>
         </div>
       </section>
 
@@ -740,9 +771,10 @@
       <section class="slide">
         <div class="slide-inner">
           <div class="slide-head">
-            <div class="kicker">Aktuelles Mandat · Analysephase</div>
+            <div class="kicker">Aktuelles E-Commerce-Mandat · Analysephase</div>
             <div class="status-chip">Mandat gerade übernommen · bewusst kein Ergebnis-Case</div>
-            <h2>Bevor optimiert wird, muss das Geschäftsmodell<br>hinter dem Klick verstanden werden.</h2>
+            <h2>Für die Optimierung reicht der Blick ins Werbekonto nicht aus.</h2>
+            <p class="subline">Sortiment, Preisposition und Marge entscheiden mit darüber, ob Paid Media skalierbar ist.</p>
           </div>
 
           <div class="analysis">
@@ -768,10 +800,10 @@
             <div class="acard">
               <div class="a-no">03</div>
               <h4>Wirtschaftlichkeit</h4>
-              <div class="a-claim">Nicht jedes Sortiment ist unter denselben Paid-Media-Bedingungen skalierbar.</div>
+              <div class="a-claim">Sortimente lassen sich über Paid Media unterschiedlich gut skalieren.</div>
               <div class="a-claim">Generisches Shopping teilweise ≈ ROAS 1</div>
               <div class="a-proof">
-                <span>Preisposition, Marge und Customer Value bestimmen die Skalierbarkeit.</span>
+                <span>Preisposition, Marge und Kundenwert bestimmen die Skalierbarkeit.</span>
               </div>
             </div>
           </div>
@@ -785,14 +817,14 @@
             <div class="c-arrow">→</div>
             <div class="c-node">Marge</div>
             <div class="c-arrow">→</div>
-            <div class="c-node">Customer Value</div>
+            <div class="c-node">Kundenwert</div>
             <div class="c-arrow">→</div>
             <div class="c-node last">wirtschaftliche Skalierung</div>
           </div>
 
-          <div class="statement">Nicht jede schlecht performende Kampagne ist ein Kampagnenproblem.<br><span class="soft">Manchmal ist der Wettbewerbs- oder Margenkontext der Engpass.</span></div>
+          <div class="statement">Schwache Kampagnen können ihre Ursache auch außerhalb des Werbekontos haben:<br><span class="soft">bei Preis, Wettbewerb, Sortiment oder Marge.</span></div>
 
-          <div class="footnote">E-Commerce-Unternehmen im Kosmetikbereich · Auditzeitraum 01.01.–30.04.2026 · Mandat erst kürzlich übernommen. Dieser Case zeigt die Analysetiefe, ausdrücklich noch keine eigenen Performance-Ergebnisse.</div>
+          <div class="footnote">E-Commerce-Unternehmen im Kosmetikbereich · Auditzeitraum 01.01.–30.04.2026. Wir haben das Mandat erst kürzlich übernommen. Der Case zeigt die Analysetiefe und ausdrücklich noch keine eigenen Performance-Ergebnisse.</div>
         </div>
       </section>
 
@@ -801,7 +833,7 @@
         <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker">Gemeinsame Performance-Steuerung</div>
-            <h2 style="font-size:52px;">Vier Systeme. Eine wirtschaftliche Wahrheit.</h2>
+            <h2 style="font-size:50px;">Google, Meta, Shop und Marktplätze gemeinsam steuern.</h2>
           </div>
 
           <div class="hub-wrap">
@@ -814,7 +846,7 @@
             <div class="hub-grid">
               <div class="node">
                 <div class="n-name">META</div>
-                <div class="n-roles">Demand Creation · Creative Testing · Retargeting</div>
+                <div class="n-roles">Nachfrage aufbauen · Creative Testing · Retargeting</div>
                 <div class="n-meta">intern betreut</div>
               </div>
 
@@ -842,14 +874,14 @@
 
           <div class="partner-row">
             <div class="partner">
-              <span class="p-name">Media-Agentur</span>
+              <span class="p-name">Externer Creative-Partner</span>
               <span class="p-role">Creative-Beratung</span>
               <span class="p-tie">bleibt eingebunden</span>
             </div>
-            <div class="partner-hint">Spezialisierte Creative-Ressource – wird in das gemeinsame Steuerungsmodell integriert, nicht ersetzt.</div>
+            <div class="partner-hint">Die vorhandene Creative-Kompetenz bleibt erhalten und wird in die gemeinsame Steuerung eingebunden.</div>
           </div>
 
-          <div class="statement">Ziel: Nicht jeder Kanal optimiert seine eigene Wahrheit –<br><span class="soft">sondern alle arbeiten auf dieselben wirtschaftlichen Ziele hin.</span></div>
+          <div class="statement">Alle Kanäle werden anhand derselben wirtschaftlichen Zielgrößen beurteilt.</div>
         </div>
       </section>
 
@@ -858,7 +890,7 @@
         <div class="slide-inner">
           <div class="slide-head">
             <div class="kicker">Von der Annahme zur Entscheidung</div>
-            <h2>Erst belastbar rechnen.<br>Dann investieren.</h2>
+            <h2>Von der Kalkulation zum konkreten Skalierungsplan.</h2>
           </div>
 
           <div class="road-rail">
@@ -868,7 +900,7 @@
           <div class="roadmap">
             <div class="rstep">
               <div class="r-no">01</div>
-              <h4>Economics</h4>
+              <h4>Kalkulation</h4>
               <div class="r-item">Marge &amp; Deckungsbeitrag</div>
               <div class="r-item">Versand / Payment / Retouren</div>
               <div class="r-item">maximaler CPO / CAC</div>
@@ -915,7 +947,7 @@
             <a class="cta-btn" id="ctaLink" href="#">Nächsten Schritt gemeinsam definieren →</a>
           </div>
 
-          <div class="footnote">Konkreter Scope, Vergütungsmodell und Media-Budget werden bewusst erst nach Vervollständigung der wirtschaftlichen Daten festgelegt.</div>
+          <div class="footnote">Umfang, Vergütungsmodell und Media-Budget legen wir bewusst erst fest, wenn die wirtschaftlichen Daten vollständig sind.</div>
         </div>
       </section>
 
@@ -935,13 +967,13 @@
   (function () {
     var COUNT = 7;
     var NOTES = [
-      "Erst nach der Discovery öffnen – die Präsentation ist die Einordnung des Gesprächs, nicht dessen Ausgangspunkt.",
-      "Die Zahlen und Ziele kurz mit Moritz bestätigen; 100k für 2026 und 500k perspektivisch sind Kundenziele, keine Prognose von DDM.",
-      "Die drei ROAS-Werte sind reine Szenarien. Nicht über einen Ziel-ROAS diskutieren, bevor Marge, variable Kosten und maximaler CPO verstanden sind.",
-      "Den High-Ticket-Case nicht über den ROAS 9,17 verkaufen. Die Story ist: Ein bereits funktionierender Kanal wurde durch bessere Messung und wirtschaftliche Budgetsteuerung deutlich effizienter.",
-      "Den Kosmetik-Case offen als neues Mandat kennzeichnen. Die Brücke zu Heinrichs ist nicht Google Ads, sondern die Frage, welche Sortimente unter Wettbewerbs-, Preis- und Margenbedingungen überhaupt sinnvoll über Paid Media skaliert werden können.",
-      "Meta-Verantwortliche ausdrücklich einbinden. An dieser Stelle fragen, wo ihr aktuell die Verbindung zwischen Meta, Shopdaten, Attribution und tatsächlicher Wirtschaftlichkeit fehlt.",
-      "Mit den vier Fragen abschließen: Was bewerben wir, über welchen Kanal, mit welchem Budget und zu welcher Wirtschaftlichkeit? Erst danach Scope und Vergütung im Dialog besprechen."
+      "Erst nach dem Discovery-Teil öffnen. Die Folien ordnen das ein, was wir vorher besprochen haben.",
+      "Zahlen und Ziele kurz von Moritz bestätigen lassen. Die 100.000 € und die 500.000 € sind seine eigenen Ziele, keine Prognose von uns.",
+      "Die drei ROAS-Werte sind nur Rechenbeispiele. Über einen Zielwert erst sprechen, wenn Marge, variable Kosten und der maximale CPO auf dem Tisch liegen. Links am Rechenweg entlanggehen, das versteht er sofort.",
+      "Beim Case nicht auf dem ROAS 9,17 hängen bleiben. Wichtig ist, wie Messung und Budgetsteuerung die Wirtschaftlichkeit verbessert haben.",
+      "Offen sagen, dass wir das Mandat gerade erst übernommen haben. Der Bezug zu Heinrichs liegt in der Frage, welche Sortimente sich unter Wettbewerb, Preis und Marge überhaupt über Paid Media skalieren lassen.",
+      "Hier die Meta-Verantwortliche direkt ansprechen. Fragen, wo ihr die Verbindung zwischen Meta, Shopdaten, Attribution und Wirtschaftlichkeit gerade fehlt.",
+      "Mit den vier Fragen abschließen. Umfang und Vergütung danach im Gespräch klären, dazu steht bewusst nichts auf den Folien."
     ];
     var active = 0;
     var notesVisible = false;
