@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+
+# Quell- und Markenassets bewusst NICHT im öffentlichen Repo:
+# - Logos & Branding/font/  enthält lizenzierte Schriften (Loretta,
+#   ITC Franklin Gothic). Sie sind im Deck als base64 eingebettet;
+#   die Rohdateien gehören nicht in ein öffentliches Repository.
+# - brand_guidelines_ddm.pdf ist ein internes Dokument.
+Logos & Branding/
